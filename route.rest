@@ -1,0 +1,65 @@
+GET http://localhost:8080/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+
+###
+GET http://localhost:8080/api/v1/products/631509bc48bbd9b36d10242e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+
+
+###
+POST  http://localhost:8080/api/v1/product/store
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+
+{
+    "product_name":"product 4",
+    "product_price":22,
+    "product_quantity":100,
+    "product_brand":"brand 4",
+    "product_category":"category 4",
+    "product_description":"This is the product 4"
+}
+
+###
+DELETE  http://localhost:8080/api/v1/products/6319db532e7221cdb9179388
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+
+###
+
+PATCH  http://localhost:8080/api/v1/products/631509bc48bbd9b36d10242e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+
+
+
+{
+    "product_name":"product 1",
+    "product_price":20,
+    "product_quantity":100,
+    "product_brand":"brand 1",
+    "product_category":"category 1",
+    "product_description":"This is the product 1"
+}
+
+
+###
+
+POST http://localhost:8080/api/v1/sign-up
+Content-Type: application/json
+
+{
+    "name":"Shaon Ahmed",
+    "email":"shaon@gmail.com",
+    "password":"123456"
+}
+
+
+###
+
+POST http://localhost:8080/api/v1/sign-in
+Content-Type: application/json
+
+{
+    "email":"shaon@gmail.com",
+    "password":"123456"
+}
