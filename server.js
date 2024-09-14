@@ -8,12 +8,12 @@ const app = express();
 //ACCEPT ONLY JSON
 app.use(express.json());
 app.use(cors());
-//All Routes
-app.use('/api/v1', routes);
-
 
 //ALL OBJECT TRUE
 app.use(express.urlencoded({ extended: true }));
+
+//All Routes
+app.use("/api/v1", routes);
 
 //DATABASE CONNECTION
 mongoose

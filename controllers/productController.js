@@ -1,5 +1,9 @@
 const Product = require("../models/product");
-const { storeProduct } = require("../services/productService.js");
+const {
+  storeProduct,
+  showProduct,
+  deleteProductById,
+} = require("../services/productService.js");
 
 //Getting All product
 const index = async (req, res) => {
@@ -30,9 +34,15 @@ const store = async (req, res) => {
 };
 
 //Getting one product
-// router.get("/:id", getProduct, (req, res) => {
-//   res.json({ product: res.singleProduct });
-// });
+const show = async (req, res) => {
+  const productId = req.params.id;
+  try {
+    const product = await showProduct(productId);
+    return res.status(201).json({ product: product });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
 
 // //Updating one product
 // router.patch("/:id", getProduct, async (req, res) => {
@@ -65,33 +75,41 @@ const store = async (req, res) => {
 //   }
 // });
 
-// //Deleting one product
-// router.delete("/:id", getProduct, async (req, res) => {
-//   try {
-//     await res.singleProduct.remove(() => {
-//       res.json({ message: "product deleted successfully" });
-//     });
-//   } catch (error) {
-//     return res.status(500).json({ message: error.message });
-//   }
-// });
+//updateProduct
 
-/*all patch get one and deleted are use same type code so
-this middleware take care all the process and get back with data*/
-async function getProduct(req, res, next) {
-  let singleProduct;
+const updateProduct = async (req, res) => {
+  const productId = req.params.id;
+  const productData = {
+    product_name: req.body.product_name,
+    product_price: req.body.product_price,
+    product_quantity: req.body.product_quantity,
+    product_brand: req.body.product_brand,
+    product_category: req.body.product_category,
+    product_description: req.body.product_description,
+  };
+
   try {
-    singleProduct = await Product.findById(req.params.id);
-    if (singleProduct == null) {
-      return res.status(400).json({ message: "product not found" });
-    }
+    const response = await updateProduct(productData);
+    return res.status(201).json({ message: response.message });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
+
+// //Deleting one product
+const deleteProduct = async (req, res) => {
+  const productId = req.params.id;
+  try {
+    await deleteProductById(productId);
+    return res.status(200).json({ message: "Product successfully deleted" });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
-  res.singleProduct = singleProduct;
-  next();
-}
+};
+
 module.exports = {
   index,
   store,
+  show,
+  deleteProduct,
 };

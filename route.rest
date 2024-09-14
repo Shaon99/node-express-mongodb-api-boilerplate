@@ -1,18 +1,18 @@
 GET http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
 
 ###
-GET http://localhost:8080/api/v1/products/631509bc48bbd9b36d10242e
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+GET http://localhost:8080/api/v1/product/66dd0c557f943f5363b732fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
 
 
 ###
 POST  http://localhost:8080/api/v1/product/store
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
 
 {
-    "product_name":"product 4",
+    "product_name":"product 3",
     "product_price":22,
     "product_quantity":100,
     "product_brand":"brand 4",
@@ -21,15 +21,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQ
 }
 
 ###
-DELETE  http://localhost:8080/api/v1/products/6319db532e7221cdb9179388
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
+DELETE  http://localhost:8080/api/v1/product/66dd0c557f943f5363b732fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
 
 ###
 
-PATCH  http://localhost:8080/api/v1/products/631509bc48bbd9b36d10242e
+PATCH  http://localhost:8080/api/v1/product/66dd0c687f943f5363b732fc
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNTc2MTAyMCwiZXhwIjoxNzI1NzY4MjIwfQ.W4kNzgF-sWJ_wxMAtLS867wO2hCCaxJpMsMIQdqET5k
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
 
 
 {
