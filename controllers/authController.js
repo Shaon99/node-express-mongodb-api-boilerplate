@@ -25,9 +25,7 @@ const signUp = async (req, res) => {
 
 //user sign in
 const signIn = async (req, res) => {
-  const { email, password } = req.body;
-  console.log(email);
-  
+  const { email, password } = req.body;  
   try {
     const user = await User.find({ email: email });
     if (user && user.length > 0) {
