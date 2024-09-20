@@ -3,6 +3,7 @@ const {
   storeProduct,
   showProduct,
   deleteProductById,
+  updateProduct,
 } = require("../services/productService.js");
 
 //Getting All product
@@ -44,7 +45,7 @@ const show = async (req, res) => {
   }
 };
 
-// //Updating one product
+//Updating one product
 // router.patch("/:id", getProduct, async (req, res) => {
 //   if (req.body.product_name != null) {
 //     res.singleProduct.product_name = req.body.product_name;
@@ -77,7 +78,7 @@ const show = async (req, res) => {
 
 //updateProduct
 
-const updateProduct = async (req, res) => {
+const update = async (req, res) => {
   const productId = req.params.id;
   const productData = {
     product_name: req.body.product_name,
@@ -87,9 +88,8 @@ const updateProduct = async (req, res) => {
     product_category: req.body.product_category,
     product_description: req.body.product_description,
   };
-
   try {
-    const response = await updateProduct(productData);
+    const response = await updateProduct(productId, productData);
     return res.status(201).json({ message: response.message });
   } catch (error) {
     return res.status(400).json({ message: error.message });
@@ -112,4 +112,5 @@ module.exports = {
   store,
   show,
   deleteProduct,
+  update,
 };
