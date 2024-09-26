@@ -1,5 +1,7 @@
 const { Pool } = require("pg");
 require("dotenv").config();
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
 const pool = new Pool({
   user: process.env.PG_USER,
@@ -31,4 +33,13 @@ const closePostgresConnection = async () => {
   }
 };
 
-module.exports = { connectPostgresDB, closePostgresConnection };
+// Optionally, you can close the Prisma client when you're done
+const closePrismaClient = async () => {
+  await prisma.$disconnect();
+};
+
+module.exports = {
+  closePrismaClient,
+  connectPostgresDB,
+  closePostgresConnection,
+};

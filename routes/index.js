@@ -8,6 +8,7 @@ const {
 const { validateProduct } = require("../request_validation/productRequest");
 
 //controllers imports
+const { authorStore, getAuthor } = require("../controllers/authorController");
 const {
   index,
   store,
@@ -18,7 +19,10 @@ const {
 const { signIn, signUp } = require("../controllers/authController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
-//Routes----------------------------
+//Author-Route----------------START----------------
+router.post("/author/store", authMiddleware, authorStore);
+router.get("/authors", authMiddleware, getAuthor);
+//Author-Route----------------END----------------
 
 //product-routes---------------START------------------------
 router.patch("/product/:id", authMiddleware, validateProduct, update);

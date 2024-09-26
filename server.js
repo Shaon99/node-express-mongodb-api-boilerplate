@@ -6,6 +6,7 @@ const connectMongoDB = require("./connectMongoDB");
 const {
   connectPostgresDB,
   closePostgresConnection,
+  closePrismaClient
 } = require("./connectPostgresDB");
 
 const app = express();
@@ -50,6 +51,7 @@ process.on("SIGINT", async () => {
     console.log("Shutting down gracefully...");
     //pool for PostgreSQL, close it here
     await closePostgresConnection();
+    await closePrismaClient();
     process.exit(0);
   } catch (error) {
     console.error("Error during shutdown:", error);

@@ -1,6 +1,5 @@
 GET http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjc1MzgyNSwiZXhwIjoxNzI2NzYxMDI1fQ.O2XQxxMVnwy2259XV50gVEoOlvwKcdzxx0PBREHYcYw
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNzM3NTc5MSwiZXhwIjoxNzI3MzgyOTkxfQ.wH1pynEBTDmoAjMTKVmEymi7-nQTFAytTQqq7Mxeqzk
 ###
 GET http://localhost:8080/api/v1/product/66dd0c557f943f5363b732fa
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjA1NDg5MCwiZXhwIjoxNzI2MDYyMDkwfQ.GCp6Km9uBjUBtZo4zrfdFEFFf2IW5RH-YiFUgilGQNM
@@ -28,7 +27,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQ
 
 PATCH  http://localhost:8080/api/v1/product/66dd0c687f943f5363b732fc
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNjc1MzgyNSwiZXhwIjoxNzI2NzYxMDI1fQ.O2XQxxMVnwy2259XV50gVEoOlvwKcdzxx0PBREHYcYw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNzM3NTc5MSwiZXhwIjoxNzI3MzgyOTkxfQ.wH1pynEBTDmoAjMTKVmEymi7-nQTFAytTQqq7Mxeqzk
 
 
 {
@@ -39,7 +38,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQ
     "product_category":"category 1",
     "product_description":"This is the product 1"
 }
-
 
 ###
 
@@ -62,3 +60,19 @@ Content-Type: application/json
     "email":"shaon@gmail.com",
     "password":"123456"
 }
+
+
+###
+POST http://localhost:8080/api/v1/author/store
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNzM3NTc5MSwiZXhwIjoxNzI3MzgyOTkxfQ.wH1pynEBTDmoAjMTKVmEymi7-nQTFAytTQqq7Mxeqzk
+
+{
+    "name":"Alex Huge",
+    "email":"alex@gmail.com"
+}
+
+###
+GET http://localhost:8080/api/v1/authors
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhb24gQWhtZWQiLCJ1c2VJZCI6IjY2ZGQwNTFiZmExMDA4NTkwMjhlMDI2MiIsImlhdCI6MTcyNzM3NTc5MSwiZXhwIjoxNzI3MzgyOTkxfQ.wH1pynEBTDmoAjMTKVmEymi7-nQTFAytTQqq7Mxeqzk
