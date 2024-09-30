@@ -1,7 +1,6 @@
 const { Pool } = require("pg");
 require("dotenv").config();
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
+const prisma = require("./client/prisma");
 
 const pool = new Pool({
   user: process.env.PG_USER,

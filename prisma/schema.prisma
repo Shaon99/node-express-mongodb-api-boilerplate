@@ -14,7 +14,7 @@ datasource db {
 }
 
 // Prisma Author schema example
-model AuthorModel {
+model Author {
   id        Int      @id @default(autoincrement()) // Primary key
   name      String
   email     String   @unique                      // Unique email
